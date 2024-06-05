@@ -1,0 +1,76 @@
+.header-label {
+    -fx-background-color: #b8b894;
+    -fx-font-weight: bold;
+}
+
+.content-pane {
+    -fx-background-color: #ECF0F1;
+}
+
+.button {
+    -fx-cursor: hand;
+}
+
+.clerk_buttons {
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    /*-fx-background-color: #ccccb3;*/
+    -fx-background-color: b8b894;
+}
+
+.table_font {
+    -fx-font-size: 15px;
+}
+
+.clear_button {
+    -fx-background-color: #fd2222;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+}
+
+.submit_button {
+    -fx-background-color: #2ECC71;
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+}
+
+.lookup_button {
+    -fx-background-color: #2ECC71;
+    -fx-text-fill: #000000;
+    -fx-font-size: 13px;
+}
+
+.darker_columns {
+    -fx-background-color: #d6d5d5;
+    /*[content_pane] -fx-background-color: #ECF0F1*/
+}
+
+.back-label {
+    -fx-background-color: #b8b894;
+    -fx-font-size: 18px;
+    -fx-cursor: hand;
+}
+
+.done-button {
+    -fx-cursor: hand;
+    -fx-font-size: 15px;
+    -fx-text-fill: #ffffff;
+    /*-fx-border-color: #000000;*/
+    -fx-background-color: #0011ff;
+}
+
+.transfer-labels {
+	-fx-font-weight: bold;
+	-fx-font-size: 16px;
+}
+
+.modify-change-buttons {
+    -fx-background-color: #2ECC71;
+    -fx-text-fill: #000000;
+}
+
+.modify-search-buttons {
+    -fx-background-color: #2ECC71;
+    -fx-text-fill: #000000;
+}

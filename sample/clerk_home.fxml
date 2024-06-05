@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <VBox alignment="CENTER" styleClass="header-label" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" lineSpacing="5.0" prefHeight="32.0" text="KAPITA C.C.A.P. INFORMATION MANAGEMENT SYSTEM" VBox.vgrow="ALWAYS">
+                    <font>
+                        <Font name="System Bold" size="19.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </Label>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </VBox>
+    </top>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefHeight="190.0" prefWidth="520.0">
+                    <children>
+                        <ImageView cache="true" fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/ccap_logo.png" />
+                            </image>
+                        </ImageView>
+                        <Label text="CLERK PANEL">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                </VBox>
+            <Separator prefHeight="30.0" prefWidth="200.0" />
+            <VBox alignment="CENTER" prefHeight="350.0" prefWidth="100.0" spacing="3.0" style="-fx-background-color: #d4d7d7;">
+               <children>
+                  <FlowPane alignment="CENTER" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <Label contentDisplay="CENTER" lineSpacing="5.0" text="C H R I S T I A N S">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                     </children>
+                  </FlowPane>
+                  <HBox alignment="CENTER" prefWidth="200.0">
+                     <children>
+                        <FlowPane alignment="CENTER" prefWidth="300.0">
+                           <children>
+                              <Label contentDisplay="CENTER" lineSpacing="5.0" text="MEMBERS">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </FlowPane>
+                        <Separator orientation="VERTICAL" />
+                        <FlowPane alignment="CENTER" prefWidth="300.0">
+                           <children>
+                              <Label contentDisplay="CENTER" lineSpacing="5.0" text="BAPTISMS    ">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </FlowPane>
+                     </children>
+                  </HBox>
+                      <HBox alignment="CENTER" prefWidth="520.0" spacing="35.0">
+                          <children>
+                        <GridPane prefWidth="210.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                                    <Button mnemonicParsing="false" onAction="#view_christians" styleClass="clerk_buttons" text="VIEW">
+                                 <tooltip>
+                                    <Tooltip text="VIEW CHURCH MEMBERS" />
+                                 </tooltip>
+                              </Button>
+                                    <Button mnemonicParsing="false" onAction="#add_christians" styleClass="clerk_buttons" text="ADD" GridPane.columnIndex="1">
+                                 <tooltip>
+                                    <Tooltip text="ADD A MEMBER" />
+                                 </tooltip>
+                              </Button>
+                                    <Button mnemonicParsing="false" onAction="#modify_christians" styleClass="clerk_buttons" text="MODIFY" GridPane.rowIndex="2">
+                                 <tooltip>
+                                    <Tooltip text="CHANGE A MEMBER'S INFORMATION" />
+                                 </tooltip>
+                              </Button>
+                                    <Button mnemonicParsing="false" onAction="#transfer_christians" styleClass="clerk_buttons" text="TRANSFERS" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <tooltip>
+                                    <Tooltip text="IN/OUT TRANSFERS" />
+                                 </tooltip>
+                              </Button>
+                           </children>
+                        </GridPane>
+                        <Separator orientation="VERTICAL" />
+                        <GridPane layoutX="175.0" layoutY="10.0" prefWidth="210.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#view_baptisms" styleClass="clerk_buttons" text="VIEW">
+                                 <tooltip>
+                                    <Tooltip text="VIEW BAPTISED MEMBERS" />
+                                 </tooltip>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#add_baptisms" styleClass="clerk_buttons" text="ADD" GridPane.columnIndex="2">
+                                 <tooltip>
+                                    <Tooltip text="ADD NEW BAPTISED MEMBERS" />
+                                 </tooltip>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#modify_baptisms" styleClass="clerk_buttons" text="MODIFY" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <tooltip>
+                                    <Tooltip text="CHANGE A MEMBER'S BAPTISM INFORMATION" />
+                                 </tooltip>
+                              </Button>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                          </children>
+                          <VBox.margin>
+                              <Insets />
+                          </VBox.margin>
+                      </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <Separator prefWidth="530.0" />
+            <VBox alignment="CENTER" prefHeight="150.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #dee1e2;">
+               <children>
+                  <FlowPane alignment="CENTER" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label lineSpacing="5.0" text="C H I L D R E N 'S  B A P T I S M">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                     </children>
+                  </FlowPane>
+                      <HBox alignment="CENTER" prefWidth="520.0" spacing="70.0">
+                          <VBox.margin>
+                              <Insets />
+                          </VBox.margin>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#view_child_bapt" styleClass="clerk_buttons" text="VIEW">
+                           <tooltip>
+                              <Tooltip text="VIEW BAPTISED CHILDREN" />
+                           </tooltip>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#add_child_bapt" styleClass="clerk_buttons" text="ADD">
+                           <tooltip>
+                              <Tooltip text="ADD A BAPTISED CHILD" />
+                           </tooltip>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#modify_child_bapt" styleClass="clerk_buttons" text="MODIFY">
+                           <tooltip>
+                              <Tooltip text="CHANGE A CHILD'S BAPTISM DETAILS" />
+                           </tooltip>
+                        </Button>
+                     </children>
+                      </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            <Separator prefWidth="530.0" />
+            <VBox alignment="CENTER" prefHeight="150.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #d4d7d7;">
+               <children>
+                  <FlowPane alignment="CENTER" prefWidth="200.0">
+                     <children>
+                        <Label text="A R C H I V E S">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </FlowPane>
+                  <HBox alignment="CENTER" prefWidth="200.0" spacing="70.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#christian_archive" styleClass="clerk_buttons" text="ARCHIVES" />
+                        <Button mnemonicParsing="false" onAction="#archive_transfers" styleClass="clerk_buttons" text="ARCHIVE TRANSFERS" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </VBox>
+            </children>
+        </VBox>
+    </center>
+   <bottom>
+      <Region prefHeight="5.0" style="-fx-background-color: #d4d7d7;" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

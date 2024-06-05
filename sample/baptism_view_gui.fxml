@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1025.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.baptism_view_controller">
+    <center>
+        <TableView fx:id="baptisms_table" styleClass="table_font" BorderPane.alignment="CENTER">
+            <columns>
+            <TableColumn prefWidth="81.0" text="PERSONAL DETAILS">
+               <columns>
+                      <TableColumn fx:id="card_no_col" prefWidth="81.0" text="CARD NO." />
+                        <TableColumn fx:id="first_name_col" prefWidth="210.0" text="FIRST NAME" />
+                        <TableColumn fx:id="last_name_col" prefWidth="210.0" text="LAST NAME" />
+               </columns>
+            </TableColumn>
+            <TableColumn prefWidth="81.0" styleClass="darker_columns" text="BAPTISM DETAILS">
+               <columns>
+                        <TableColumn fx:id="baptised_on_col" prefWidth="150.0" text="BAPTISM DATE" />
+                  <TableColumn fx:id="baptised_by_col" prefWidth="200.0" text="BAPTISED BY" />
+                  <TableColumn fx:id="baptised_at_col" prefWidth="170.0" text="BAPTISM LOCATION" />
+               </columns>
+            </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+    <top>
+        <VBox prefHeight="140.0" prefWidth="920.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/ccap_logo.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="BOTTOM_LEFT" prefWidth="100.0">
+                    <children>
+                        <Label fx:id="back_label" onMouseClicked="#back_function" styleClass="back-label" text="BACK">
+                            <tooltip>
+                                <Tooltip text="GO BACK TO CLERK PANEL" />
+                            </tooltip>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" />
+                    </padding>
+                </HBox>
+                <FlowPane alignment="CENTER" prefWidth="200.0" styleClass="header-label">
+                    <children>
+                        <Label lineSpacing="5.0" text="KAPITA C.C.A.P. BAPTISED MEMBERS">
+                            <font>
+                                <Font name="System Bold" size="21.0" />
+                            </font></Label>
+                    </children>
+                </FlowPane>
+            </children>
+        </VBox>
+    </top>
+    <bottom>
+        <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="100.0" vgap="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="del_btn" mnemonicParsing="false" onAction="#delete" text="DELETE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                    <tooltip>
+                        <Tooltip text="CLICK ON THE CARD NO. DIRECTLY TO DELETE THAT MEMBER" />
+                    </tooltip>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="10.0" top="10.0" />
+            </BorderPane.margin>
+        </FlowPane>
+    </bottom>
+</BorderPane>

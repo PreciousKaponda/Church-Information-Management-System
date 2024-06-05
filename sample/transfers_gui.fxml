@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="635.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.transfers_controller">
+   <top>
+      <VBox alignment="CENTER" prefWidth="100.0" styleClass="header-label" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" lineSpacing="5.0" text="KAPITA C.C.A.P. INFORMATION MANAGEMENT SYSTEM">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="140.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ccap_logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="TRANSFERS PANEL">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <FlowPane prefWidth="200.0">
+               <children>
+                  <Label onMouseClicked="#back_function" styleClass="back-label" text="BACK">
+                     <tooltip>
+                        <Tooltip text="GO BACK TO CLERK PANEL" />
+                     </tooltip>
+                  </Label>
+               </children>
+            </FlowPane>
+            <HBox alignment="CENTER" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #dee1e2;">
+                           <children>
+                              <Label styleClass="transfer-labels" text="TEMPORARY TRANSFERS IN">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <FlowPane alignment="CENTER" hgap="40.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="temp_trans_in_view_btn" mnemonicParsing="false" onAction="#view_temp_trans_in" styleClass="clerk_buttons" text="View" />
+                                    <Button fx:id="temp_trans_in_add_btn" mnemonicParsing="false" onAction="#add_temp_trans_in" styleClass="clerk_buttons" text="Add" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </FlowPane>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #d4d7d7;">
+							<children>
+                              <Label styleClass="transfer-labels" text="PERMANENT TRANSFERS IN">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <FlowPane alignment="CENTER" hgap="40.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="perm_trans_in_view_btn" mnemonicParsing="false" onAction="#view_perm_trans_in" styleClass="clerk_buttons" text="View" />
+                                    <Button fx:id="perm_trans_in_add_btn" mnemonicParsing="false" onAction="#add_perm_trans_in" styleClass="clerk_buttons" text="Add" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </FlowPane>
+                           </children>
+						</VBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #d4d7d7;">
+							<children>
+                              <Label styleClass="transfer-labels" text="TEMPORARY TRANSFERS OUT">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <FlowPane alignment="CENTER" hgap="40.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="temp_trans_out_view_btn" mnemonicParsing="false" onAction="#view_temp_trans_out" styleClass="clerk_buttons" text="View" />
+                                    <Button fx:id="temp_trans_out_add_btn" mnemonicParsing="false" onAction="#add_temp_trans_out" styleClass="clerk_buttons" text="Add" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </FlowPane>
+                           </children>
+						</VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #dee1e2;">
+							<children>
+                              <Label styleClass="transfer-labels" text="PERMANENT TRANSFERS OUT">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <FlowPane alignment="CENTER" hgap="40.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="perm_trans_out_view_btn" mnemonicParsing="false" onAction="#view_perm_trans_out" styleClass="clerk_buttons" text="View" />
+                                    <Button fx:id="perm_trans_out_add_btn" mnemonicParsing="false" onAction="#add_perm_trans_out" styleClass="clerk_buttons" text="Add" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </FlowPane>
+                           </children>
+						</VBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="850.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.baptism_modify_controller">
+    <top>
+        <VBox alignment="CENTER" styleClass="header-label" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" lineSpacing="5.0" text="KAPITA C.C.A.P. INFORMATION MANAGEMENT SYSTEM">
+                    <font>
+                        <Font name="System Bold" size="23.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefWidth="100.0" spacing="5.0">
+                    <children>
+                        <ImageView fitHeight="120.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/ccap_logo.png" />
+                            </image>
+                        </ImageView>
+                        <Label text="MODIFY MEMBER'S BAPTISM DETAILS">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <FlowPane prefWidth="200.0">
+                            <padding>
+                                <Insets bottom="5.0" />
+                            </padding>
+                            <children>
+                                <Label onMouseClicked="#back_function" styleClass="back-label" text="BACK">
+                                    <tooltip>
+                                        <Tooltip text="GO BACK TO THE CLERK PANEL" />
+                                    </tooltip>
+                                </Label>
+                                <Region prefWidth="400.0" />
+                                <Label text="CARD NO.:">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <HBox alignment="CENTER" prefWidth="200.0">
+                                    <children>
+                                        <TextField fx:id="search_field" prefHeight="25.0" prefWidth="132.0" promptText="Search by card no.">
+                                            <tooltip>
+                                                <Tooltip text="SEARCH FOR A MEMBER USING THEIR CARD NO." />
+                                            </tooltip>
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font></TextField>
+                                        <Button mnemonicParsing="false" onAction="#search" styleClass="modify-search-buttons" text="Search">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font></Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </FlowPane>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                </VBox>
+                <Separator prefHeight="30.0" />
+                <VBox prefHeight="40.0" prefWidth="100.0">
+                    <children>
+                        <FlowPane hgap="30.0" prefHeight="100.0" vgap="5.0">
+                            <children>
+                        <Label fx:id="card_no_label" layoutX="78.0" layoutY="12.0" text="CARD NO.: ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="first_name_label" layoutX="10.0" layoutY="10.0" text="FIRST NAME: ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="last_name_label" layoutX="10.0" layoutY="10.0" text="LAST NAME: ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                                <Label fx:id="baptised_on_label" text="BAPTISM DATE: ">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="baptised_by_label" text="BAPTISED BY: ">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="baptised_at_label" text="BAPTISM LOCATION: ">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </FlowPane>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="5.0" />
+                    </VBox.margin>
+                </VBox>
+                <Separator prefHeight="20.0" />
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0" style="-fx-background-color: #dee1e2;">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="130.0" spacing="5.0">
+                            <children>
+                                <Label text="BAPTISM DATE">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font></Label>
+                                <TextField fx:id="baptised_on_field" promptText="YYYY/MM/DD">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <tooltip>
+                                        <Tooltip text="Date Format: YYYY/MM/DD">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font></Tooltip>
+                                    </tooltip>
+                                </TextField>
+                                <Button mnemonicParsing="false" onAction="#mod_baptised_on" styleClass="modify-change-buttons" text="Change">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="170.0" spacing="5.0">
+                            <children>
+                                <Label text="BAPTISED BY">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font></Label>
+                                <TextField fx:id="baptised_by_field">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <Button mnemonicParsing="false" onAction="#mod_baptised_by" styleClass="modify-change-buttons" text="Change">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" spacing="5.0">
+                            <children>
+                                <Label text="BAPTISM LOCATION">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font></Label>
+                                <TextField fx:id="baptised_at_field">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </TextField>
+                                <Button mnemonicParsing="false" onAction="#mod_baptised_at" styleClass="modify-change-buttons" text="Change">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </VBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <FlowPane alignment="CENTER" hgap="60.0" prefHeight="55.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="clear_btn" mnemonicParsing="false" onAction="#clear_form" styleClass="clear_button" text="Clear">
+                    <tooltip>
+                        <Tooltip text="CLEAR THE ENTIRE FORM" />
+                    </tooltip>
+                </Button>
+                <Button fx:id="done_btn" mnemonicParsing="false" onAction="#done" styleClass="done-button" text="DONE">
+                    <tooltip>
+                        <Tooltip text="DONE? GO BACK TO THE TABLE" />
+                    </tooltip>
+                </Button>
+            </children>
+        </FlowPane>
+    </bottom>
+</BorderPane>

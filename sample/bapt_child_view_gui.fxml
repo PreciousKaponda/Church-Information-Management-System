@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="920.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.bapt_child_view_controller">
+    <center>
+        <TableView fx:id="bapt_child_table" styleClass="table_font" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn prefWidth="75.0" text="CHILD'S DETAILS">
+                    <columns>
+                        <TableColumn fx:id="cert_no_col" prefWidth="74.0" text="CERT NO." />
+                        <TableColumn fx:id="name_col" prefWidth="180.0" text="NAME" />
+                        <TableColumn fx:id="gender_col" prefWidth="75.0" text="GENDER" />
+                        <TableColumn fx:id="dob_col" prefWidth="117.0" text="DATE OF BIRTH" />
+                    </columns>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" styleClass="darker_columns" text="PARENTS DETAILS">
+                    <columns>
+                        <TableColumn fx:id="parent_col" prefWidth="200.0" text="PARENTS" />
+                        <TableColumn fx:id="house_no_col" prefWidth="150.0" text="HOUSE NO." />
+                        <TableColumn fx:id="zone_col" prefWidth="70.0" text="ZONE" />
+                    </columns>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="BAPTISM DETAILS">
+                    <columns>
+                        <TableColumn fx:id="baptised_on_col" prefWidth="100.0" text="DATE" />
+                        <TableColumn fx:id="baptised_by_col" prefWidth="180.0" text="BAPTISED BY" />
+                        <TableColumn fx:id="witness_col" prefWidth="200.0" text="WITNESS" />
+                    </columns>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+    <top>
+        <VBox prefHeight="140.0" prefWidth="920.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/ccap_logo.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="BOTTOM_LEFT" prefWidth="100.0">
+                    <children>
+                        <Label fx:id="back_label" onMouseClicked="#back_function" styleClass="back-label" text="BACK">
+                            <tooltip>
+                                <Tooltip text="GO BACK TO CLERK PANEL" />
+                            </tooltip>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" />
+                    </padding>
+                </HBox>
+                <FlowPane alignment="CENTER" prefWidth="200.0" styleClass="header-label">
+                    <children>
+                        <Label lineSpacing="5.0" text="KAPITA C.C.A.P. BAPTISED CHILDREN">
+                            <font>
+                                <Font name="System Bold" size="21.0" />
+                            </font></Label>
+                    </children>
+                </FlowPane>
+            </children>
+        </VBox>
+    </top>
+    <bottom>
+        <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="100.0" vgap="5.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="del_btn" mnemonicParsing="false" onAction="#delete" text="DELETE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                    <tooltip>
+                        <Tooltip text="CLICK ON THE CERTIFICATE NO. DIRECTLY TO DELETE THAT CHILD" />
+                    </tooltip>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="10.0" top="10.0" />
+            </BorderPane.margin>
+        </FlowPane>
+    </bottom>
+</BorderPane>
